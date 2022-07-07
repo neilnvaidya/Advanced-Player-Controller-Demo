@@ -10,19 +10,9 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "KinematicBody2D",
-"class": "KinematicPlayerController2D",
+"class": "PlayerController",
 "language": "GDScript",
-"path": "res://PlayerController/KinematicPlayerController2D.gd"
-}, {
-"base": "PlayerState",
-"class": "PlayerDefaultState",
-"language": "GDScript",
-"path": "res://PlayerController/States/PlayerDefaultState.gd"
-}, {
-"base": "PlayerState",
-"class": "PlayerIdleState",
-"language": "GDScript",
-"path": "res://PlayerController/States/PlayerIdleState.gd"
+"path": "res://PlayerController/PlayerController.gd"
 }, {
 "base": "Node",
 "class": "PlayerState",
@@ -40,9 +30,7 @@ _global_script_classes=[ {
 "path": "res://PlayerController/script_templates/PlayerStateTemplate_COMMENTED.gd"
 } ]
 _global_script_class_icons={
-"KinematicPlayerController2D": "",
-"PlayerDefaultState": "",
-"PlayerIdleState": "",
+"PlayerController": "",
 "PlayerState": "",
 "PlayerTemplateState": "",
 "PlayerTemplateState_COMMENTED": ""
@@ -50,9 +38,13 @@ _global_script_class_icons={
 
 [application]
 
-config/name="AdvancedKinematicPlayerController"
-run/main_scene="res://AdvancedKinematic2DPlayerController/KinematicPlayerController2D.tscn"
+config/name="AdvancedKinematicPlayerControllerDemo"
+run/main_scene="res://Level/Level.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Globals="*res://Globals.gd"
 
 [editor]
 
